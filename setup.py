@@ -39,7 +39,7 @@ if sys.platform == 'darwin':
                    extra_link_args=['-Wl,-framework', '-Wl,Accelerate', '-lopenblas'],
                    language='c++')]
 else:
-    extra_link_args = ['-lcblas']
+    extra_link_args = ['-lopenblas']
     dist = platform.linux_distribution(full_distribution_name=0)[0]
     redhat_dists = set(["redhat", "fedora", "centos"])
     if dist in redhat_dists:
