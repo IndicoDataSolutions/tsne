@@ -44,7 +44,7 @@ else:
     redhat_dists = set(["redhat", "fedora", "centos"])
     if dist in redhat_dists:
         extra_link_args = ['-lsatlas']
-    
+
     # LINUX
     ext_modules = [Extension(name='tsne.bh_sne',
                    sources=['tsne/bh_sne_src/quadtree.cpp', 'tsne/bh_sne_src/tsne.cpp', 'tsne/bh_sne.pyx'],
@@ -72,5 +72,6 @@ setup(name='tsne.bh_sne',
       license='Apache License Version 2.0, January 2004',
       packages=find_packages(),
       ext_modules=ext_modules,
+      setup_requires=['cython'],
       install_requires=required
 )
