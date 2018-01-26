@@ -72,6 +72,6 @@ setup(name='tsne.bh_sne',
       license='Apache License Version 2.0, January 2004',
       packages=find_packages(),
       ext_modules=ext_modules,
-      setup_requires=['cython'],
+      setup_requires=['Cython'],
       install_requires=required
 )
